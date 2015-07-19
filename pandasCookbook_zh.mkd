@@ -517,7 +517,7 @@ The multindexing docs.
     1    1.1  1.2  1.11  1.22
     2    1.1  1.2  1.11  1.22
     
-    # Now stack & Reset
+    # Now stack & Reset堆积重置
     In [62]: df = df.stack(0).reset_index(1);df
     Out[62]: 
         level_1     X     Y
@@ -529,7 +529,7 @@ The multindexing docs.
     2       One  1.10  1.20
     2       Two  1.11  1.22
     
-    # And fix the labels (Notice the label 'level_1' got added automatically)
+    # And fix the labels (Notice the label 'level_1' got added automatically)固定列标签(注意标签"level_1"是自动添加的)
     In [63]: df.columns = ['Sample','All_X','All_Y'];df
     Out[63]: 
         Sample  All_X  All_Y
@@ -541,9 +541,9 @@ The multindexing docs.
     2      One   1.10   1.20
     2      Two   1.11   1.22
     
-<h3 id='Arithmetic'>Arithmetic</h3>
+<h3 id='Arithmetic'>Arithmetic算法运算</h3>
 
-[Performing arithmetic with a multi-index that needs broadcasting](http://stackoverflow.com/questions/19501510/divide-entire-pandas-multiindex-dataframe-by-dataframe-variable/19502176#19502176)
+[Performing arithmetic with a multi-index that needs broadcasting通过广播对多索引的数据进行算数运算](http://stackoverflow.com/questions/19501510/divide-entire-pandas-multiindex-dataframe-by-dataframe-variable/19502176#19502176)
 
     In [64]: cols = pd.MultiIndex.from_tuples([ (x,y) for x in ['A','B','C'] for y in ['O','I']])
 
@@ -563,7 +563,7 @@ The multindexing docs.
 
 <h3 id='Slicing'>Slicing</h3>
 
-[Slicing a multi-index with xs](http://stackoverflow.com/questions/12590131/how-to-slice-multindex-columns-in-pandas-dataframes)
+[Slicing a multi-index with xs使用xs对一个多索引数据进行分片](http://stackoverflow.com/questions/12590131/how-to-slice-multindex-columns-in-pandas-dataframes)
 
     In [67]: coords = [('AA','one'),('AA','six'),('BB','one'),('BB','two'),('BB','six')]
 
@@ -579,8 +579,9 @@ The multindexing docs.
        six      55
     
 To take the cross section of the 1st level and 1st axis the index:
+选择第一层和第一列的数据
 
-    In [70]: df.xs('BB',level=0,axis=0)  #Note : level and axis are optional, and default to zero
+    In [70]: df.xs('BB',level=0,axis=0)  #Note : level and axis are optional, and default to zero注意: level和axis是参数, 默认是零
     Out[70]: 
          MyData
     one      33
@@ -588,6 +589,7 @@ To take the cross section of the 1st level and 1st axis the index:
     six      55
     
 ...and now the 2nd level of the 1st axis.
+现在对第二层和第一列数据进行处理
 
     In [71]: df.xs('six',level=1,axis=0)
     Out[71]: 
@@ -595,7 +597,7 @@ To take the cross section of the 1st level and 1st axis the index:
     AA      22
     BB      55
     
-[Slicing a multi-index with xs, method #2](http://stackoverflow.com/questions/14964493/multiindex-based-indexing-in-pandas)
+[Slicing a multi-index with xs, method #2使用xs对多索引数据分片方法2](http://stackoverflow.com/questions/14964493/multiindex-based-indexing-in-pandas)
 
     In [72]: index = list(itertools.product(['Ada','Quinn','Violet'],['Comp','Math','Sci']))
 
@@ -603,7 +605,7 @@ To take the cross section of the 1st level and 1st axis the index:
 
     In [74]: indx = pd.MultiIndex.from_tuples(index,names=['Student','Course'])
 
-    In [75]: cols = pd.MultiIndex.from_tuples(headr) #Notice these are un-named
+    In [75]: cols = pd.MultiIndex.from_tuples(headr) #Notice these are un-named注意:他们是没有名字的
 
     In [76]: data = [[70+x+y+(x*y)%3 for x in range(4)] for y in range(9)]
 
