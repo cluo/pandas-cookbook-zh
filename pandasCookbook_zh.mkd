@@ -458,6 +458,7 @@ There are 2 explicit slicing methods, with a third general case
     7    3    3
     
 Method 1 : idxmin() to get the index of the mins
+方法1: 使用idxmin()函数获得最小项的数据
 
     In [57]: df.loc[df.groupby("AAA")["BBB"].idxmin()]
     Out[57]: 
@@ -467,6 +468,7 @@ Method 1 : idxmin() to get the index of the mins
     6    3    2
 
 Method 2 : sort then take first of each
+方法2: 排序然后取第一项
 
     In [58]: df.sort("BBB").groupby("AAA", as_index=False).first()
     Out[58]: 
@@ -476,12 +478,13 @@ Method 2 : sort then take first of each
     2    3    2
     
 Notice the same results, with the exception of the index.
+这两种方法的结果不同, 但是各自的索引不同
 
-<h2 id='MultiIndexing'>MultiIndexing</h2>
+<h2 id='MultiIndexing'>MultiIndexing多个索引</h2>
 
 The multindexing docs.
 
-[Creating a multi-index from a labeled frame](http://stackoverflow.com/questions/14916358/reshaping-dataframes-in-pandas-based-on-column-labels)
+[Creating a multi-index from a labeled frame根据一个设置标签的数据框中创建一个多索引的数据框](http://stackoverflow.com/questions/14916358/reshaping-dataframes-in-pandas-based-on-column-labels)
 
     In [59]: df = pd.DataFrame({'row' : [0,1,2],
        ....:                    'One_X' : [1.1,1.1,1.1],
@@ -495,7 +498,7 @@ The multindexing docs.
     1    1.1    1.2   1.11   1.22    1
     2    1.1    1.2   1.11   1.22    2
     
-    # As Labelled Index
+    # As Labelled Index使用一个标签列作为索引
     In [60]: df = df.set_index('row');df
     Out[60]: 
          One_X  One_Y  Two_X  Two_Y
@@ -504,7 +507,7 @@ The multindexing docs.
     1      1.1    1.2   1.11   1.22
     2      1.1    1.2   1.11   1.22
     
-    # With Heirarchical Columns
+    # With Heirarchical Columns分层列标签
     In [61]: df.columns = pd.MultiIndex.from_tuples([tuple(c.split('_')) for c in df.columns]);df
     Out[61]: 
          One        Two      
