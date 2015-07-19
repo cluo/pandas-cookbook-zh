@@ -669,10 +669,10 @@ To take the cross section of the 1st level and 1st axis the index:
     Quinn   Math      76   77
     Violet  Math      79   80
 
-[Setting portions of a multi-index with xs](http://stackoverflow.com/questions/19319432/pandas-selecting-a-lower-level-in-a-dataframe-to-do-a-ffill)
+[Setting portions of a multi-index with xs使用xs修改多索引中的部分数据](http://stackoverflow.com/questions/19319432/pandas-selecting-a-lower-level-in-a-dataframe-to-do-a-ffill)
 <h3 id='Sorting'>Sorting</h3>
 
-[Sort by specific column or an ordered list of columns, with a multi-index](http://stackoverflow.com/questions/14733871/mutli-index-sorting-in-pandas)
+[Sort by specific column or an ordered list of columns, with a multi-index多索引数据排序](http://stackoverflow.com/questions/14733871/mutli-index-sorting-in-pandas)
 
     In [84]: df.sort(('Labs', 'II'), ascending=False)
     Out[84]: 
@@ -689,7 +689,7 @@ To take the cross section of the 1st level and 1st axis the index:
             Math      71  73   75  74
             Comp      70  71   72  73
     
-[Partial Selection, the need for sortedness;](https://github.com/pydata/pandas/issues/2995)
+[Partial Selection, the need for sortedness;排序过程中的局部选择](https://github.com/pydata/pandas/issues/2995)
 
 <h3 id='Levels'>Levels</h3>
 
@@ -697,17 +697,17 @@ To take the cross section of the 1st level and 1st axis the index:
 
 [Flatten Hierarchical columns](http://stackoverflow.com/questions/14507794/python-pandas-how-to-flatten-a-hierarchical-index-in-columns)
 
-<h3 id='panelnd'>panelnd</h3>
+<h3 id='panelnd'>panelnd多维数据板</h3>
 
 The panelnd docs.
 
-[Construct a 5D panelnd](http://stackoverflow.com/questions/18748598/why-my-panelnd-factory-throwing-a-keyerror)
+[Construct a 5D panelnd构建一个5维的数据板](http://stackoverflow.com/questions/18748598/why-my-panelnd-factory-throwing-a-keyerror)
 
-<h2 id='Missing-Data'>Missing Data</h2>
+<h2 id='Missing-Data'>Missing Data丢失数据处理</h2>
 
 The missing data docs.
 
-Fill forward a reversed timeseries
+Fill forward a reversed timeseries填充一个反向的时间序列
 
     In [85]: df = pd.DataFrame(np.random.randn(6,1), index=pd.date_range('2013-08-01', periods=6, freq='B'), columns=list('A'))
 
@@ -735,7 +735,7 @@ Fill forward a reversed timeseries
     
 [cumsum reset at NaN values](http://stackoverflow.com/questions/18196811/cumsum-reset-at-nan)
 
-<h3 id='Replace'>Replace</h3>
+<h3 id='Replace'>Replace替换</h3>
 
 [Using replace with backrefs](http://stackoverflow.com/questions/16818871/extracting-value-and-creating-new-column-out-of-it)
 
@@ -743,7 +743,7 @@ Fill forward a reversed timeseries
 
 The grouping docs.
 
-[Basic grouping with apply](http://stackoverflow.com/questions/15322632/python-pandas-df-groupy-agg-column-reference-in-agg)
+[Basic grouping with apply,apply函数的基础分组操作](http://stackoverflow.com/questions/15322632/python-pandas-df-groupy-agg-column-reference-in-agg)
 
 Unlike agg, apply’s callable is passed a sub-DataFrame which gives you access to all the columns
 
