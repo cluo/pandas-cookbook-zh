@@ -162,7 +162,7 @@ Split a frame with a boolean criterion
 
 <h3 id='Building-Criteria'>Building Criteria构建条件语句</h3>
 
-[Select with multi-column criteria](http://stackoverflow.com/questions/15315452/selecting-with-complex-criteria-from-pandas-dataframe)
+[Select with multi-column criteria对多个列进行条件语句](http://stackoverflow.com/questions/15315452/selecting-with-complex-criteria-from-pandas-dataframe)
 
     In [13]: df = pd.DataFrame(
        ....:      {'AAA' : [4,5,6,7], 'BBB' : [10,20,30,40],'CCC' : [100,50,-30,-50]}); df
@@ -372,7 +372,7 @@ There are 2 explicit slicing methods, with a third general case
     
 <h3 id='Panels'>Panels数据面板</h3>
 
-[Extend a panel frame by transposing, adding a new dimension, and transposing back to the original dimensions](http://stackoverflow.com/questions/15364050/extending-a-pandas-panel-frame-along-the-minor-axis)
+[Extend a panel frame by transposing, adding a new dimension, and transposing back to the original dimensionss使用连续转置的方法, 先对数据进行转置操作, 添加一行数据,接着再对数据进行转置得到与原始数据类似的数据](http://stackoverflow.com/questions/15364050/extending-a-pandas-panel-frame-along-the-minor-axis)
 
     In [42]: rng = pd.date_range('1/1/2013',periods=100,freq='D')
 
