@@ -390,7 +390,7 @@ There are 2 explicit slicing methods, with a third general case
     Major_axis axis: 2013-01-01 00:00:00 to 2013-04-10 00:00:00
     Minor_axis axis: A to D
     
-    #Assignment using Transpose  (pandas < 0.15)
+    #Assignment using Transpose  (pandas < 0.15)使用转置的方法(当pandas的版本小于0.15时)
     In [47]: pf = pf.transpose(2,0,1)
     
     In [48]: pf['E'] = pd.DataFrame(data, rng, cols)
@@ -403,7 +403,7 @@ There are 2 explicit slicing methods, with a third general case
     Major_axis axis: 2013-01-01 00:00:00 to 2013-04-10 00:00:00
     Minor_axis axis: A to E
     
-    #Direct assignment (pandas > 0.15)
+    #Direct assignment (pandas > 0.15)直接赋值(当pandas的版本大于0.15时)
     In [50]: pf.loc[:,:,'F'] = pd.DataFrame(data, rng, cols);pf
     Out[50]: 
     <class 'pandas.core.panel.Panel'>
@@ -412,7 +412,7 @@ There are 2 explicit slicing methods, with a third general case
     Major_axis axis: 2013-01-01 00:00:00 to 2013-04-10 00:00:00
     Minor_axis axis: A to F
     
-[Mask a panel by using np.where and then reconstructing the panel with the new masked values](http://stackoverflow.com/questions/14650341/boolean-mask-in-pandas-panel)
+[Mask a panel by using np.where and then reconstructing the panel with the new masked values使用np的where生成数据板的掩码,然后使用新的掩码重构数据板](http://stackoverflow.com/questions/14650341/boolean-mask-in-pandas-panel)
 <h3 id='New-Columns'>New Columns</h3>
 
 [Efficiently and dynamically creating new columns using applymap](http://stackoverflow.com/questions/16575868/efficiently-creating-additional-columns-in-a-pandas-dataframe-using-map)
